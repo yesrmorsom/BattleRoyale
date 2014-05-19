@@ -1,0 +1,73 @@
+
+public class Location
+{
+    //private boolean food;
+    //private boolean water;
+    private boolean hasOccupants;
+    private Occupant [][] occupant;
+    private int r= (int)(Math.random()*100)+1;
+    private arrayList<Occupant> people;
+    public Location()
+    {
+        if (r%9==0)
+        {
+            food=true;
+        }
+        if (r%7==0)
+        {
+            water=true;
+        }
+        /*
+         * if (r%8==0)
+        {
+            hasOccupants=true;
+            setOccupants();
+        }
+        */
+    }
+    public Location(boolean newFood, boolean newWater, boolean newOccupants)
+    {
+        food=newFood;
+        water=newWater;
+        hasOccupants=newOccupants;
+        if (hasOccupants==true)
+        {
+            setOccupants();
+        }
+    }
+    public Location ()
+    {
+        
+    }
+    public Location()
+    {
+    }
+    public ArrayList<Occupant> setOccupants()
+    {
+        int fillarray= 1;
+        if (fillarray=0)
+        {
+            for (int i=0; i<4; i++)
+            {
+                people.add(new Occupant());
+            }
+        }
+        for (int i=0; i<fillarray; i++)
+        {
+            people.add(new Occupant());
+        }
+    }
+    public boolean getfood()
+    {
+        return food;
+    }
+    public boolean getwater()
+    {
+        return water;
+    }
+    public boolean getoccupants()
+    {
+        return hasOccupants;
+    }
+    
+}
