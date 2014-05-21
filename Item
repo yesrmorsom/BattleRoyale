@@ -1,4 +1,14 @@
-pubic class Item
+public class Item
 {
- 
+   private String itemName;
+   private boolean radioItem;
+   public Item(String str, boolean b)
+   {
+    itemName=str;
+    radioItem=b;
+    }
+   public String getName()
+   {
+    return itemName;
+    }
 }
