@@ -2,7 +2,7 @@ public class Location
 {
     private boolean food;
     private boolean water;
-    private Occupant occupant;
+    private NPC occupant;
 
     //sets food and water to true or false based on a random number 
     //sets occupant equal to null
@@ -21,15 +21,15 @@ public class Location
         occupant = null;
     }
 
-    public Location(boolean newFood, boolean newWater, Occupant newOccupant)
+    public Location(boolean newFood, boolean newWater, NPC newOccupant)
     {
         food = newFood;
         water = newWater;
         occupant = newOccupant;
     }
 
-    //passes in an occupant for this location, sets food and water randomly
-    public Location(Occupant aOccupant)
+    //passes in an NPC occupant for this location, sets food and water randomly
+    public Location(NPC aOccupant)
     {
         this();
         occupant = aOccupant;
@@ -42,10 +42,10 @@ public class Location
     }
 
     //returns the current occupant of this Location, sets the occupant variable to null
-    public Occupant removeOccupant() 
+    public NPC removeOccupant() 
     {
         if (occupant == null) return null;
-        Occupant temp = occupant;
+        NPC temp = occupant;
         occupant = null;
         return temp;
     }
