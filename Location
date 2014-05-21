@@ -1,0 +1,68 @@
+public class Location
+{
+    private boolean food;
+    private boolean water;
+    private Occupant occupant;
+
+    //sets food and water to true or false based on a random number 
+    //sets occupant equal to null
+    public Location()
+    {
+        int randomize = (int)(Math.random()*100)+1;
+        
+        if (randomize % 9 == 0) //change what randomize is modulused by to alter the likelihood of food
+        {
+            food=true;
+        }
+        if (randomize % 7 == 0)
+        {
+            water=true;
+        }
+        occupant = null;
+    }
+
+    public Location(boolean newFood, boolean newWater, Occupant newOccupant)
+    {
+        food = newFood;
+        water = newWater;
+        occupant = newOccupant;
+    }
+
+    //passes in an occupant for this location, sets food and water randomly
+    public Location(Occupant aOccupant)
+    {
+        this();
+        occupant = aOccupant;
+    }
+    
+    //sets an occupant for this Location
+    public void setOccupant(Occupant x)
+    {
+        occupant = x;
+    }
+
+    //returns the current occupant of this Location, sets the occupant variable to null
+    public Occupant removeOccupant() 
+    {
+        if (occupant == null) return null;
+        Occupant temp = occupant;
+        occupant = null;
+        return temp;
+    }
+
+    public boolean getFood()
+    {
+        return food;
+    }
+
+    public boolean getWater()
+    {
+        return water;
+    }
+
+    public boolean getOccupant()
+    {
+        return occupant;
+    }
+
+}
