@@ -1,0 +1,51 @@
+import java.util.ArrayList;
+public class Occupant
+{
+   private ArrayList<item> inventory;
+   public ArrayList<iten> getInventory() //returns inventory
+    {
+        return inventory;
+    }
+   public void addInventory(item x) //adds item
+    {
+        inventory.add(x);
+    }
+    /*public void removeInventory(item x) //goes through inventory and removes item at first instance of item
+    {
+        boolean check=false;
+        for (i=0; i<inventory.size(); i++)
+        {
+            if (inventory.get(i)==x) //should this be instanceof?
+            {
+                inventory.remove(i); 
+                check=true;
+                break;
+            }
+        }
+        if(check==true)
+        {
+            System.out.println("Item "+x+" was removed")
+        }
+        else
+        {
+            System.out.println("Item "+x+" is not in your inventory")
+        }
+    }
+    */
+   //cleaner way to remove item
+    public void removeInventory(item x) //goes through inventory and removes item at first instance of item
+    {
+        boolean check;
+        check= inventory.remove(x); 
+        if(check==true)
+        {
+            System.out.println("Item "+x+" was removed");
+        }
+        else
+        {
+            System.out.println("Item "+x+" is not in your inventory");
+        }
+    }
+   public abstract void fight();
+   public abstract void act();
+}
