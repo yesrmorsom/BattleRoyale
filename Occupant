@@ -37,7 +37,7 @@ public class Occupant
     {
         boolean check;
         check= inventory.remove(x); 
-        if(check==true)
+        if(check==true) //once GUI is in place, see if this can be done through click reaction
         {
             System.out.println("Item "+x+" was removed");
         }
@@ -48,4 +48,6 @@ public class Occupant
     }
    public abstract void fight();
    public abstract void act();
+   public abstract void getNeighbors();
+   public abstract void speak();
 }
