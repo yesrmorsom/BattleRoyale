@@ -1,0 +1,13 @@
+public class Equipment extends Item
+{
+   private int equipmentName;
+   private int[] modifiers; // index 0 Hunger, 1 Thirst, 2 Strength, 3 HP
+   public Equipment(String name, int hunger, int thirst, int strength, int hp)
+   {
+    super(name,false);
+    modifiers[0]=hunger;
+    modifiers[1]=thirst;
+    modifiers[2]=strength;
+    modifiers[3]=hp;
+    }
+}
