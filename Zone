@@ -1,0 +1,83 @@
+public class Zone
+{
+  private Location[][] locs;
+  public Location getLocation(int x, int y)
+  {
+  return locs[x][y];  
+  }
+  // randomizes the locations in the zone to specific parameters.
+  public Zone(int numWater, int numFood, NPC npc)
+  {
+   locs = Location[4][4];
+   for (Location[] x; locs)
+    {
+     for(Location y; x)
+      {
+       y = new Location();
+      }
+    }                                                                                             
+   while(numWater>0)
+   {
+    int x = (int)Math.random()*4;
+    int y = (int)Math.random()*4;
+    if (locs[x][y].getWater==null)
+    {
+     locs[x][y]= new Location(locs[x][y].getFood(),true,locs[x][y].getOccupant());
+     numWater--;
+    }
+    }
+   while(numFood>0)
+   {
+    int x = (int)Math.random()*4;
+    int y = (int)Math.random()*4;
+    if (locs[x][y].getFood==null)
+    {
+     locs[x][y]= new Location(true,locs[x][y].getWater(),locs[x][y].getOccupant());
+     numFood--;
+    }
+    }
+    int x = (int)Math.random()*4;
+    int y = (int)Math.random()*4;
+    locs[x][y]= new Location(locs[x][y].getFood(),locs[x][y].getWater(),npc);
+  }
+  // the 9 different zones have different constructors that will be called in world
+  public Zone(int q)
+  {
+   if (q==0)
+   {
+    Zone(0,0,new NPC())
+    }
+   if (q==1)
+   {
+    Zone(3,0,new NPC())
+    }
+   if (q==2)
+   {
+    Zone(0,3,new NPC())
+    }
+   if (q==3)
+   {
+    Zone(4,4,new NPC())
+    }
+   if (q==4)
+   {
+    Zone(9,9,new NPC())
+    } 
+   if (q==5)
+   {
+    Zone(2,5,new NPC())
+    }
+   if (q==6)
+   {
+    Zone(5,2,new NPC())
+    }
+   if (q==7)
+   {
+    Zone(1,1,new NPC())
+    }
+   if (q==8)
+   {
+    Zone(3,3,new NPC())
+    }
+  }
+}
