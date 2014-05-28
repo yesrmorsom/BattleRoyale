@@ -1,0 +1,9 @@
+public class Weapon extends Equipment
+{
+   private boolean isWeapon;
+   public Weapon(String name, int hunger, int thirst, int strength, int hp)
+   {
+    super(name, hunger, thirst, strength, hp);
+    isWeapon=true;
+    }
+}
