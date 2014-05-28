@@ -1,0 +1,7 @@
+public class Compass extends Equipment
+{
+   public Compass()
+   {
+    super("Compass",0,0,0,0);
+    }
+}
