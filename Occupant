@@ -46,8 +46,10 @@ public class Occupant
             System.out.println("Item "+x+" is not in your inventory");
         }
     }
+   public void getOccupants() //finds occupants in shared space (could be food, water, NPC, or item)
+   {
+   }
    public abstract void fight();
    public abstract void act();
-   public abstract void getNeighbors();
    public abstract void speak();
 }
