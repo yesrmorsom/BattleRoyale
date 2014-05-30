@@ -65,6 +65,9 @@ public class Occupant
    {
        
     }
+    public void trade()
+    {
+    }
    public abstract void fight();
    public abstract void act();
    public abstract void speak();
